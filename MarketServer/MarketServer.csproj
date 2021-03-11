@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Image\maximize.png" />
+    <None Remove="Resources\Image\minimize.png" />
+    <None Remove="Resources\Image\PersonSitComputer.jpg" />
+    <None Remove="Resources\Image\power.png" />
+    <None Remove="Resources\Image\shop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="2.0.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Control\" />
+    <Folder Include="Constanta\" />
+    <Folder Include="Style\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Image\maximize.png" />
+    <Resource Include="Resources\Image\minimize.png" />
+    <Resource Include="Resources\Image\PersonSitComputer.jpg" />
+    <Resource Include="Resources\Image\power.png" />
+    <Resource Include="Resources\Image\shop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Propertes\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Propertes\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
